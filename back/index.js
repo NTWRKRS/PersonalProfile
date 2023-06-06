@@ -8,7 +8,11 @@ const cors = require('cors');
 
 const app = express();
 
+const homeRoute = require('./routes/home');
+
 app.use(cors());
+
+app.get("/",homeRoute);
 
 app.use(express.json());
 
